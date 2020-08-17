@@ -20,11 +20,19 @@
     <body>
        <h3>Preguntas</h3>
         <pre>
+        
 ¿Cuál es la diferencia entre Internet y World Wide Web?
+        -De acuerdo con un artículo de la BBC, el Internet es una inmensa red de computadoras alrededor del mundo conectadas entre  si. Por el otro lado la World Wide Web es una enorme colección de páginas que está <b>dentro de esta red de computadoras (Internet).</b>
         
 ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?
+        -Los HTTP Verbs o métodos HTTP definen acciones que se realizará sobre un recurso. Para más información de estos puede verse en <a href="#enlace">su sección de descripciones</a>.
         
 ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?
+        -EL método GET. Esto es debido a que es el método utilizado para recuperar datos de un recurso. Esto se hace utilizando la URL, donde se introducen los datos de la siguiente forma:
+        
+        En la página www.formulario.com se introdujo el nombre (Juan) y apellido (Perez) del usuario en la página principal del sitio.
+        
+        URL generado: <b>https//:www.formulario.com/index.html?nombre=Juan&apellido=Perez</b>
         
 ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?
 
@@ -51,25 +59,28 @@ Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa es
 ¿Cuál es el ciclo de desarrollo de sistemas de información?
         </pre>
         <h3>Descripciones</h3>
-        <p>URL : Los URL tienen varios</p>
-        <h4>HTTP</h4>
+        <p>URL: Los URL tienen varios</p>
+        <h4 id="enlace">HTTP</h4>
         <table>
             <tr>
                 <td>Métodos más frecuentes</td>
                 <td>
                     <ul>
-                        <li>GET: Recupera datos de un recurso  específico</li>
-                        <li>POST: Envia una entidad a un recurso específico</li>
-                        <li>PUT: </li>
-                        <li>HEAD</li>
-                        <li>TRACE</li>
-                        <li>OPTIONS</li>
-                        <li>PATCH</li>
-                        <li>DELETE</li>
+                        <li>GET: Recupera datos de un recurso específico del servidor.</li>
+                        <li>POST: Envia una entidad a un recurso específico del servidor.</li>
+                        <li>PUT: Actualiza por completo un recurso del servidor.</li>
+                        <li>HEAD: Obtiene información sobre un determinado recurso.</li>
+                        <li>PATCH: Actualiza parcialmente un recurso en el servidor.</li>
+                        <li>DELETE: Elimina un registro existente en el servidor.</li>
                     </ul>
                 </td>
             </tr>
-        </table> 
+        </table>
+        <p>HTML5:</p>
+        <p>JS:</p>
+        <p>php:</p>
+        <p>jsp:</p>
+        <p>Ajax:</p>
         
     </body>
     
