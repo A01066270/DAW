@@ -9,29 +9,46 @@ h1 {
   text-shadow: 3px 1px 1px darkgrey;
 }
 
+h2 {
+  
+  color: white;
+}
+
 h3 {
     color:white;
 }
 
 
+ul {
+    width: auto;
+    color:black;
+    margin: 0 auto;
+    text-align: justify;
+    background:#bbe1fa;
+    border: 2px solid darkgrey;
+    
+}
+
+
 p{
-    width: 800px;
+    width: auto;
     color:#bbe1fa;
     
 }
 body {
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
   background-color: #0f4c75;
   padding: 0 20px 20px 20px;
   border: 5px solid darkblue;
 }
-pre
+
+dl
 {
+    width: auto;
     color:black;
     margin: 0 auto;
-    text-align: left;
-
+    text-align: justify;
     background:#bbe1fa;
     border: 5px solid darkgrey;
 }
@@ -43,8 +60,8 @@ p
 
 table
 {
-    width: 700px;
-    border-radius: 2px solid black;
+    width: auto;
+    border: 2px solid black;
     color: white;
     align-content: center;
     text-align: justify;
