@@ -5,7 +5,7 @@ html
 
 h1 {
   
-  color: white;
+  color: #1b262c;
   text-shadow: 3px 1px 1px darkgrey;
 }
 
@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-    color:white;
+    color:#1b262c;
 }
 
 
@@ -32,13 +32,14 @@ ul {
 
 p{
     width: auto;
-    color:#bbe1fa;
+    color:#1b262c;
+    max-width:800px;
     
 }
 body {
   max-width: 800px;
   margin: 0 auto;
-  background-color: #0f4c75;
+  background-color: white;
   padding: 0 20px 20px 20px;
   border: 5px solid darkblue;
 }
@@ -52,19 +53,13 @@ dl
     background:#bbe1fa;
     border: 5px solid darkgrey;
 }
-p
-{
-    color:White;
-    max-width:800px;
-}
-
 
 table
 {
     width: 800px;
     background-color: #20639b;
-    border: .5px solid black;
-    color: lightgrey;
+    border: 1.5px solid black;
+    color: white;
     align-content: center;
     text-align: left;
 }
