@@ -55,16 +55,18 @@ dl
 p
 {
     color:White;
+    max-width:800px;
 }
 
 
 table
 {
-    width: auto;
-    border: 2px solid black;
-    color: white;
+    width: 800px;
+    background-color: #20639b;
+    border: .5px solid black;
+    color: lightgrey;
     align-content: center;
-    text-align: justify;
+    text-align: left;
 }
 
 img {
