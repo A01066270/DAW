@@ -6,17 +6,18 @@
     <h3>Pide un número del 1 al 10 al visitante y la página le regresa esa cantidad de números aleatorios del 1 al 12.</h3>
     <script type = "text/javascript">
         //Método para solicitar un prompt para introducir datos
-        var numero = prompt('Inserta un número del uno al 10');
+        var numero = prompt('Inserta un número del uno al 5');
         
         //Ciclo if para confirmar que el número esta en el rango establecido
         if (numero < 10 || numero < 0) {
-            var check = 0;
-            while (check!=numero){
-                var x = Math.round(Math.random()*12);
-                document.write(x);
-                document.write("<br>");
-                check = check + 1;
-            }
+            switch {
+                var check = 0;
+                    while (check!=numero){
+                        var x = Math.round(Math.random()*12);
+                        document.write(x);
+                        document.write("<br>");
+                        check = check + 1;
+            }}
                 
         }else{alert('Número inválido')}
        
@@ -26,4 +27,3 @@
 <body>
     
 </body>
-</html>
