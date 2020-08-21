@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lab2-Ejercicio2</title>
+    <title>Lab2-Ejercicio6</title>
+    <h1>Problema libre: Encontrar opciones de hora para hacer ejercicio.</h1>
+    <h3>Pide un número del 1 al 10 al visitante y la página le regresa esa cantidad de números aleatorios del 1 al 12.</h3>
     <script type = "text/javascript">
-        var a = Math.round(Math.random()*10);
-        var b = Math.round(Math.random()*10);
-        var respuesta = prompt("Sume estos números: "+a+" + " + b);
-        var correcta = a + b;
-        if (respuesta == correcta){
-            alert('Respuesta correcta');
-            
-        }else{
-            alert('Respuesta incorrecta');
-        }
+        var numero = prompt('Inserta un número del uno al 10');
+        if (numero < 10 || numero < 0) {
+            var check = 0;
+            while (check!=numero){
+                var x = Math.round(Math.random()*12);
+                document.write(x);
+                document.write(<br>);
+                check = check + 1;
+            }
+                
+        }else{alert('Nùmero inválido')}
+       
         
     </script>
 </head>
