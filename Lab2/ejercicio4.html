@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab2-Ejercicio4</title>
+    <script type = "text/javascript">
+    
+    var a = new Array(100, 100, 100);
+    var b = new Array(40, 70, 80);
+    var x = new Array(a, b);
+    promedio(x);
+    //función que recibe un arreglo de arreglos numéricos y regresa el promedio de los arreglos recibidos.  
+    function promedio(arreglo) {
+        for (i=0; i<arreglo.lenght; i++) {
+            var prom = 0;
+            var ar = new Array(arreglo[i]);
+            var sum = 0;
+            for (j=0; j<ar.lenght; j++) {
+                sum = sum + ar[j];
+            }
+            var prom = (sum)/(ar.length);
+            var ar = [];
+            document.write("El promedio"+i+'es: '+prom)
+        }
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

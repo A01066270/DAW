@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab2-Ejercicio3</title>
+    <script type = "text/javascript">
+        //var x = new Array(1, -1, 0, 0, 0, 0, 4, 4, 34);
+        var x = new Array(1, 2, -3 ,4 ,5, 0, 0, 6, -1);
+        tiponum(x);
+        //función para regresar la cantidad de valores negativos, positivos e iguales a 0
+        function tiponum(arreglo){
+            var mayor = 0;
+            var menor = 0;
+            var igual = 0;
+            for(i=0; i<arreglo.length; i++){
+                if (arreglo[i] < 0) {
+                    menor++;
+                }else if(arreglo[i] > 0){
+                    mayor++;
+                }
+                else if(arreglo[i] == 0){
+                    igual++;
+                }
+            }
+            alert('En el arreglo hay '+igual+' ceros, '+mayor+' números mayores a 0 y '+menor+' números menores de 0.')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
