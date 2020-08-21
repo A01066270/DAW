@@ -12,7 +12,8 @@
     function promedio(arreglo) {
         for (i=0; i<arreglo.lenght; i++) {
             var prom = 0;
-            var ar = new Array(arreglo[i]);
+            var ar = new Array.of(arreglo[i[0]],arreglo[i[1]],arreglo[i[2]]);
+            document.write(ar);
             var sum = 0;
             for (j=0; j<ar.lenght; j++) {
                 sum = sum + ar[j];
