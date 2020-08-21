@@ -3,10 +3,16 @@
 <head>
     <title>Lab2-Ejercicio3</title>
     <script type = "text/javascript">
-        //var x = new Array(1, -1, 0, 0, 0, 0, 4, 4, 34);
-        var x = new Array(1, 2, -3 ,4 ,5, 0, 0, 6, -1);
-        tiponum(x);
-        //función para regresar la cantidad de valores negativos, positivos e iguales a 0
+        //Casos de prueba, cambia el parámetro de la función tiponum para probar el código
+        var x = new Array(1, -1, 0, 0, 0, 0, 4, 4, 34);
+        var y = new Array(1, 2, -3 ,4 ,5, 0, 0, 6, -1);
+        var z = new Array(1, 0, 0, 98, 100, -700, 3);
+        
+        //Cambia los parámetros de esta función para ver hacer diferentes pruebas.
+        tiponum(z);
+        
+        
+        //Función para regresar la cantidad de valores negativos, positivos e iguales a 0
         function tiponum(arreglo){
             var mayor = 0;
             var menor = 0;
