@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab5 Primero ejercicio</title>
+</head>
+<body>
+    <h3>Venta de computadoras STH</h3>
+    <p>Bienvenido, que computadora esta buscando?</p>
+    <table>
+        <tr>
+            <td>Escritorio</td>
+            <td>Laptop</td>
+            <td>Gamer/Uso rudo</td>
+            
+        </tr>
+        <tr>
+            <td>La computadora de escritorio disponible es:</td>
+            <td>La laptop disponible es:</td>
+            <td>La computadora de uso rudo  disponible es:</td>
+        </tr>
+        <tr>
+            <td>Precio: 8000</td>
+            <td>Precio: 15000</td>
+            <td>Precio: 50000</td>
+        </tr>
+        <tr>
+            <td>Cantidad:</td>
+            <td>Unidades Disponibles:</td>
+            <td>Unidades Disponibles:</td>
+        </tr>
+        <tr>
+            <td><form>
+    <input id="e" list="cante" name="op">
+    <datalist id="cante">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+    </datalist>
+    
+</form></td>
+        <td><form>
+    <input id="l" list="cante" name="op">
+    <datalist id="cantl">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+    </datalist>
+    
+</form></td>
+        <td><form>
+    <input id="g" list="cante" name="op">
+    <datalist id="cantg">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+    </datalist>
+    
+</form></td>
+        </tr>
+        
+    </table>
+
+<button onclick="check()">Validar</button>
+<br>
+
+<script type = "text/javascript">
+    //En inventario solo hay 3 de cada uno
+var fp = 0;
+
+function check() {
+    var cante = document.getElementById("e").value;
+    var cantl = document.getElementById("l").value;
+    var cantg = document.getElementById("g").value;
+    
+    if (cante == 4 || cantl == 4 || cantg == 4) {
+        alert('Fuera de inventario');
+        stop
+    }else{
+
+    cante = cante * 8000;
+    cantl = cantl * 15000;
+    cantg = cantg * 50000;
+    
+    var fp = (cante + cantl + cantg);
+    document.write("Precio Final: ");
+    document.write("<br>");
+    document.write(fp);
+    }
+}
+    
+    
+    
+</script>
+</body>    
+    
+</html>

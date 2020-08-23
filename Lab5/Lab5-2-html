@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab5 Primero ejercicio</title>
+</head>
+<body>
+    <h3>Valida tu contraseña aqui</h3>
+    <p>En los siguientes campos puedes corroborar que una contraseña esta bien estructurada.</p>
+<input type="text" id="c1" value="Ingrese contraseña">
+<input type="text" id="c2" value="Reingrese contraseña">
+<button onclick="validar()">Validar contraseñas</button>
+<script type = "text/javascript">
+function validar() {
+    var c1 = document.getElementById("c1").value;
+    var c2 = document.getElementById("c2").value;
+    
+    if (c1 == c2){
+        alert('Contraseña válida');
+    }else{
+        alert("Contraseña incorrecta. Intente de nuevo");
+    }
+}
+</script>
+</body>    
+    
+</html>
