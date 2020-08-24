@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab5 Tercer ejercicio</title>
+</head>
+<body>
+    <h3>Te recomiendo una pelicula despues de estas 4 preguntas</h3>
+    <p>Responde las preguntas y te recomiendo una película.</p>
+    <form>
+    <ol>
+        <li>¿Prefieres las peliculas de terror o las de comedia?<br><input type='radio' name='uno' value="2" >Terror<br><input type='radio' name='uno' value="1">Comedia</li>
+        <li>¿Te gusta la música relajante(pop, clásica, country, etc..) o la musica más movida (rock, electrónica,)?<br><input type='radio' name='dos' value="1">Relajante<br><input type='radio' name='dos' value="2">Movida</li>
+        <li>¿Que prefieres? ¿Videojuegos o series de tv?<br><input type='radio' name='tres' value="1">Series<br><input type='radio' name='tres' value="2">Videojuegos</li>
+        <li>¿Cuál color prefieres? ¿Negro o azul cielo?<br><input type='radio' name='cuatro' value="2">Negro<br><input type='radio' name='cuatro' value="1">Azul cielo</li>
+    </ol>
+    <button onclick='recomendar()'>Recomendar</button>
+    </form>
+<script type = "text/javascript">
+function recomendar(){
+    var one = document.getElementById('uno').value;
+    
+    document.write('one');
+}
+</script>
+</body>    
+    
+</html>
