@@ -2,26 +2,81 @@
 <html>
 <head>
     <title>Lab5 Tercer ejercicio</title>
+    <link rel="stylesheet" href="../Lab1/style.css">
 </head>
 <body>
     <h3>Te recomiendo una pelicula despues de estas 4 preguntas</h3>
     <p>Responde las preguntas y te recomiendo una película.</p>
-    <form>
-    <ol>
-        <li>¿Prefieres las peliculas de terror o las de comedia?<br><input type='radio' name='uno' value="2" >Terror<br><input type='radio' name='uno' value="1">Comedia</li>
-        <li>¿Te gusta la música relajante(pop, clásica, country, etc..) o la musica más movida (rock, electrónica,)?<br><input type='radio' name='dos' value="1">Relajante<br><input type='radio' name='dos' value="2">Movida</li>
-        <li>¿Que prefieres? ¿Videojuegos o series de tv?<br><input type='radio' name='tres' value="1">Series<br><input type='radio' name='tres' value="2">Videojuegos</li>
-        <li>¿Cuál color prefieres? ¿Negro o azul cielo?<br><input type='radio' name='cuatro' value="2">Negro<br><input type='radio' name='cuatro' value="1">Azul cielo</li>
-    </ol>
-    <button onclick='recomendar()'>Recomendar</button>
-    </form>
-<script type = "text/javascript">
-function recomendar(){
-    var one = document.getElementById('uno').value;
     
-    document.write('one');
+    <form style="font:normal 16px sans-serif">
+<p>¿Prefieres las peliculas de terror o las de comedia?.</p>
+<p><input type="radio" name="pregunta1" id="p11"> Terror.</p>
+<p><input type="radio" name="pregunta1" id="p12"> Comedia.</p>
+ 
+<p>¿Te gusta la música relajante(pop, clásica, country, etc..) o la musica más movida (rock, electrónica,)?</p>
+<p><input type="radio" name="pregunta2" id="p21"> Música Relajante.</p>
+<p><input type="radio" name="pregunta2" id="p22"> Música Movida.</p>
+
+ 
+<p>¿Que prefieres? ¿Videojuegos o series de tv?</p>
+<p ><input type="radio" name="pregunta3" id="p31"> Videojuegos.</p>
+<p ><input type="radio" name="pregunta3" id="p32"> Series.</p>
+
+ 
+<p>¿Cuál color prefieres? ¿Negro o azul cielo?</p>
+<p ><input type="radio" name="pregunta4" id="p41"> Azul cielo</p>
+<p ><input type="radio" name="pregunta4" id="p42"> Negro</p>
+
+<hr>
+<p><input type="button" value=" Resultado " onclick="resultado()"/></p>
+</form>
+    
+   
+<script type=text/javascript>
+function resultado() {
+var p1, p2, p3, p4, nota;
+ 
+//Formulario
+if (document.getElementById('p11').checked==true) {p1=2}
+else {p1=1}
+if (document.getElementById('p22').checked==true) {p2=2}
+else {p2=1}
+if (document.getElementById('p31').checked==true) {p3=2}
+else {p3=1}
+if (document.getElementById('p42').checked==true) {p4=2}
+else {p4=1}
+ 
+resultado=p1+p2+p3+p4;
+
+//Análisis de resultados
+switch (resultado) {
+    case 4:
+        alert('Te recomiendo la palícula "About Time" de Richard Curtis. Ve el trailer de la película con el botón de abajo');
+        document.write('Ve el trailer de About Time');
+        style.display = 'block';
+    case 5:
+        alert('Te recomiendo la palícula "August Rush" de  Kirsten Sheridan. Ve el trailer de la película con el botón de abajo');
+        document.write('Ve el trailer de August Rush');
+        style.display = 'block';
+    case 6:
+        alert('Te recomiendo la palícula "Hacksaw Ridge" de Mel Gibson. Ve el trailer de la película con el botón de abajo');
+        document.write('Ve el trailer de Hacksaw Ridge');
+        style.display = 'block';
+    case 7:
+        alert('Te recomiendo la palícula "Limitless" de Neil Burger. Ve el trailer de la película con el botón de abajo');
+        document.write('Ve el trailer de Limitless');
+        style.display = 'block';
+    case 8:
+        alert('Te recomiendo la palícula "Jhon Wick" de Chad Stahelski. Ve el trailer de la película con el botón de abajo');
+        document.write('Ve el trailer de John Wick');
+        style.display = 'block';
+}
+alert(" Aciertos: " + nota);
+location.reload();
 }
 </script>
+    
+<button id="link" style="display:none"></button>
 </body>    
     
 </html>
