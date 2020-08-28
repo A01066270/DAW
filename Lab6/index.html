@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab6: Documentos dinámicos</title>
+    <link rel="stylesheet" href="style.css">
+                                 
+</head>
+<header>
+    <h1 id="myt">Laboratorio 6:</h1>
+    <h1>Documentos dinámicos con JavaScript</h1>
+</header>
+        
+<table>
+    <td><h2><a href="index.html">Página principal</a></h2></td>
+    <td><h2><a href="preguntas.html">Preguntas de Documentos Dinámicos</a></h2></td>
+</table>
+<body>
+<h1>Formato para registrar algun paciente</h1>
+<button onclick="change()">Modo divertido</button>
+<div>
+    
+    <form>
+        <p class="a" id='prueba'>Que se arme la fiesta</p>
+        <br>
+        <br>
+        <label>Nombre Completo</label>
+        <input type="text" id="name">
+        <label>Sexo:</label>
+        <input id="type" list="list1" name="op">
+    <datalist id="list1">
+        <option value="Hombre">
+        <option value="Mujer">
+ 
+    </datalist>
+        <br>
+        <br>
+        <label>Número</label>
+        <input type="text" id="number">
+        <br>
+        <br>
+        <label>Correo electrónico</label>
+        <input type="text" id="email">
+        <label>Motivo</label>
+        <input type="text">
+        
+        
+    
+    </form>
+        <label>Adjuntar documento</label>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="descarga.png" draggable="true" ondragstart="drag(event)" width="120" height=auto>
+        
+</div>
+    
+
+</body>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+function change() {
+  document.getElementById("prueba").style.fontSize = "xx-large";
+    document.getElementById("prueba").style.visibility = "visible";
+    
+}
+
+</script>
+
+</html>
