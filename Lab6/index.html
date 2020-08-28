@@ -16,35 +16,50 @@
 </table>
 <body>
 <h1>Formato para registrar algun paciente</h1>
+    <p id="h">Este es un formato para registrar a un paciente con información fundamental</p>
 <button onclick="change()">Modo divertido</button>
-<div>
+<p class="a" id='prueba'>Que se arme la fiesta</p>
+<div class="a">
     
     <form>
-        <p class="a" id='prueba'>Que se arme la fiesta</p>
-        <br>
-        <br>
         <label>Nombre Completo</label>
         <input type="text" id="name">
         <label>Sexo:</label>
         <input id="type" list="list1" name="op">
     <datalist id="list1">
-        <option value="Hombre">
-        <option value="Mujer">
- 
+    <option value="Hombre">
+    <option value="Mujer">
     </datalist>
-        <br>
-        <br>
-        <label>Número</label>
-        <input type="text" id="number">
-        <br>
-        <br>
-        <label>Correo electrónico</label>
-        <input type="text" id="email">
-        <label>Motivo</label>
-        <input type="text">
-        
-        
-    
+    <br>
+    <br>
+    <label>Número</label>
+    <input type="text" id="number">
+     <br>
+     <br>
+     <label>Correo electrónico</label>
+     <input type="text" id="email">
+     <br>
+    <br>
+    <label>Motivo de primera visita</label>
+     <input type="text">
+    <br>
+    <br>
+    <label>¿Padece el paciente de alguna enfermedad crónica?</label>
+    <input id="type" list="list2" name="op">
+    <datalist id="list2">
+    <option value="No">
+    <option value="Cardiaca">
+    <option value="Pulmonar">
+    <option value="Renal">
+    <option value="Diabetes">
+    </datalist>
+    <p>Tiene el paciente alguno de los siguientes?</p>
+<p><input type="radio" name="p1" id="p11"> Tatuajes.</p>
+<p><input type="radio" name="p1" id="p12"> Intervenciones quirurgicas recientes de 6 meses o menos.</p>
+<p><input type="radio" name="p1" id="p13"> Bebe alcohol.</p>
+<p><input type="radio" name="p1" id="p14"> Fuma.</p>
+
+
     </form>
         <label>Adjuntar documento</label>
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -53,6 +68,10 @@
         
 </div>
     
+<div class="b">
+    <h4>Referencias fuera de lecturas</h4>
+    <p><a href='https://www.hostinger.mx/tutoriales/insertar-javascript-en-html/#:~:text=Agregar%20JavaScript%20directamente%20a%20un%20archivo%20HTML,-La%20primera%20forma&text=Puedes%20hacerlo%20utilizando%20la%20etiqueta,entre%20las%20etiquetas'>Hstinger.mx</a></p><p><a href='https://es.stackoverflow.com/questions/140333/cambiar-color-texto-javascript'>Stack Overflow</a></p>
+</div>
 
 </body>
 <script>
@@ -70,11 +89,13 @@ function drop(ev) {
   ev.target.appendChild(document.getElementById(data));
 }
 function change() {
-  document.getElementById("prueba").style.fontSize = "xx-large";
+    document.getElementById("prueba").style.fontSize = "xx-large";
     document.getElementById("prueba").style.visibility = "visible";
+    setInterval(function(){ alert("F I E S T A !!!"); }, 3000);
     
 }
 
 </script>
+
 
 </html>

@@ -8,17 +8,19 @@ h1 {
   text-shadow: 3px 1px 1px darkgrey;
 }
 
-h2 {
+h4 {
   
-  color: white;
+  color: #1b262c;
 }
 
 h3 {
     color:#1b262c;
+    
 }
 
 p.a {
     visibility: hidden;
+    
 }
 
 ul {
@@ -26,10 +28,16 @@ ul {
     color:black;
     margin: 0 auto;
     text-align: justify;
-    border: 2px solid darkgrey;
     
 }
-
+div.a {
+    border: 2px solid black;
+    text-align: justify;
+    top: 0px;
+}
+div.b {
+    text-align: right;
+}
 #div1 {
   width: 250px;
   height: 150px;
@@ -49,6 +57,7 @@ body {
   background-color: white;
   padding: 0 20px 20px 20px;
   border: 5px solid darkblue;
+    height: auto;
 }
 
 dl
