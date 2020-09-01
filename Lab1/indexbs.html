@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>HTML-Fernando Vargas</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
         <!--CSS BOOTSTRAP -->
         
     </head>
@@ -12,11 +12,30 @@
         <h1>Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</h1>
     </header>
         
-        <table>
-                <td><h2><a href="index.html">Acerca de mi</a></h2></td>
-                <td><h2><a href="preguntas.html">Preguntas de HTML y HTTP</a></h2></td>
-                <td><h2><a href="bd.html">Preguntas Bases de Datos</a></h2></td>
-        </table>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Bienvenidos</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="preguntas.html">Preguntas sobre HTTP</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="bd.html">Preguntas sobre Bases de datos</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-md-0">
+      <input class="form-control" type="text" placeholder="Search">
+    </form>
+  </div>
+</nav>
+    <br>
     <body>
         <p>
             Mi nombre es Fernando Vargas y esta es mi página de presentación para el laboratorio 1 de la materia de Desarrollo de Aplicaciones Web. Esta página, al igual que la mayoría de las páginas web modernas está hecha en HTML5. En este sitio web habrá una serie de preguntas y definiciones acerca del tema HTTP y HTML5. Pueden encontrar esa sección y las referencias en el <a href="preguntas.html"> apartado de preguntas</a>.
