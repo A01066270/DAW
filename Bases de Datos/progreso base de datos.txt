@@ -1,0 +1,101 @@
+CREATE TABLE Paciente YA
+(
+  idPaciente numeric(5),
+  Nombre varchar(50),
+  numero numeric(10),
+  RFC varchar(13),
+  fechaNacimiento datetime,
+  email varchar(50)
+)
+
+CREATE TABLE Paciente_Expediente YA
+(
+  idEmpleado numeric(5),
+  idConsultorio numeric(5),
+)
+
+CREATE TABLE Expediente YA
+(
+  idExpediente numeric(5),
+  fechaCreacion datetime,
+  firma_electronica tinyint
+)
+
+CREATE TABLE Doctor_Paciente ya
+(
+  idPaciente numeric(5),
+  idEmpleado varchar(50),
+  fecha datetime,
+  tratamiento varchar(100)
+)
+
+CREATE TABLE Doctor ya
+(
+  idEmpleado numeric(5),
+  numCedula varchar(20),
+)
+
+CREATE TABLE Asistente ya
+(
+  idEmpleado numeric(5),
+  turno varchar(13),
+)
+
+CREATE TABLE Empleado ya
+(
+  idEmpleado numeric(5),
+  Nombre varchar(50),
+  numero numeric(10),
+  fechaNacimiento datetime,
+  email varchar(50)
+)
+
+CREATE TABLE Empleado_Consultorio ya
+(
+  idEmpleado numeric(5),
+  idConsultorio numeric(5),
+  fecha datetime,
+)
+ 
+CREATE TABLE Consultorio ya
+(
+  idConsultorio numeric(5),
+  Telefono numeric(10),
+  Direccion varchar(100),
+  Ciudad varchar(50)
+)
+
+CREATE TABLE Administrador_Consultorio no
+(
+  idAdministrador numeric(5),
+  idConsultorio numeric(5),
+  fecha datetime,
+)
+
+/*
+CREATE TABLE Administrador no
+(
+  idAdministrador numeric(5),
+  Nombre varchar(50),
+  numero numeric(10),
+  RFC varchar(13),
+  fechaNacimiento datetime,
+  email varchar(50)
+)
+*/
+
+CREATE TABLE Especialista_Consultorio Ya
+(
+  idEspecialista numeric(5),
+  idConsultorio numeric(5),
+  fecha datetime,
+)
+
+CREATE TABLE Especilista ya
+(
+  idEspecialista numeric(5),
+  Nombre varchar(50),
+  Numero numeric(10),
+  especialidad varchar(50),
+  email varchar(50)
+)

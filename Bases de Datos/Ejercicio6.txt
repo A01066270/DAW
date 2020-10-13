@@ -1,0 +1,69 @@
+1. Actrices de "Las brujas de salem"
+ Opcion a)
+SELECT a.Nombre
+FROM Actor a, elenco e
+WHERE a.nombre = e.nombre 
+AND Sexo = 'F' 
+AND e.titulo = 'Las brujas de Salem'
+
+Opcion b)
+
+SELECT Nombre
+FROM Elenco
+WHERE Titulo = 'Las brujas de Salem'
+AND NOMBRE IN
+(SELECT Nombre
+From Actor
+WHERE Sexo = 'F')
+
+2. Nombres de los actores que aparecen en películas producidas por MGM en 1995.
+
+Opcion a)
+SELECT Nombre
+FROM elenco e, pelicula p
+WHERE e.titulo = p.titulo 
+AND e.añrrro
+AND p.nomestudio = 'MGM' 
+AND año='1995'
+
+Opcion b)
+SELECT Nombre
+FROM elenco 
+WHERE Titulo IN
+(SELECT Titulo
+FROM pelicular
+WHERE año='1995' AND nomestudio='MGM')
+
+3.Películas que duran más que “Lo que el viento se llevó” (de 1939).
+
+Opcion a)
+NO es posible..
+
+Opcion b)
+
+SELECT Titulo
+FROM Pelicula 
+WHERE duración < (SELECT duración FROM pelicula WHERE titulo='Lo que el viento se llevó')
+
+4.
+
+5. Nombres de los productores de las películas en las que ha aparecido Sharon Stone.
+
+Opcion a)
+
+SELECT p.Nombre
+FROM Productor p, Pelicula pel, elenco e
+WHERE p.idproductor = pel.idproductor 
+AND e.titulo = pel.titulo 
+AND e.año = pel.año
+AND e.nombre = 'Sharon Stone'         
+
+SELECT pr.Nombre
+FROM Productor pr, Pelicula pel
+WHERE pr.idproductor = pel.idproductor 
+AND Titulo  IN
+(SELECT Titulo
+FROM elenco
+where nombre='Sharon Stone')
+
+6. 
