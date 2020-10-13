@@ -1,8 +1,10 @@
 <?php
 
 include("_header.html");
-include("_body.html");
-include("_form_paciente");
+include("_navbar.html");
+include("_registro_paciente.html");
+/*include("_multiregistro_paciente.html");*/
+include("_form_paciente.html");
 include("_footer.html");
 
 ?>
