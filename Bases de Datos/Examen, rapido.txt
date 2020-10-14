@@ -1,0 +1,74 @@
+CREATE TABLE Carrera
+(
+	codigo numeric(5) PRIMARY KEY,
+	nombre varchar(50)	
+)
+
+CREATE TABLE Alumno
+(
+	matricula numeric(7) PRIMARY KEY,
+	nombre varchar(15),
+	apellidop varchar(15),
+	amaterno varchar(15),
+	codigo numeric(5),
+
+ CONSTRAINT FK_alumno_carrera FOREIGN KEY (codigo) REFERENCES Carrera(codigo)
+
+)
+
+INSERT INTO Carrera VALUES (10000, 'Sistemas Computacionales')
+INSERT INTO Carrera VALUES (10001, 'Sistemas Digitales')
+INSERT INTO Carrera VALUES (10002, 'Mecatronica')
+INSERT INTO Carrera VALUES (10003, 'Mecanica')
+INSERT INTO Carrera VALUES (10004, 'Diseño Industrial')
+
+
+INSERT INTO Alumno VALUES (1000000,'Fernando','Vargas','Alvarez', 10000)
+INSERT INTO Alumno VALUES (1000001,'Guillermo','Espino','Mateos', 10000)
+INSERT INTO Alumno VALUES (1000002,'Carla','Corso','Vazquez', 10003)
+INSERT INTO Alumno VALUES (1000003,'Fernando','Vargas','Diaz', 10003)
+INSERT INTO Alumno VALUES (1000004,'Itzel','Alvarez','Contreras', 10004)
+INSERT INTO Alumno VALUES (1000005,'Cecilia','Cobos','Pio', 10004)
+
+DELETE FROM Alumno WHERE nombre='Cecilia'
+
+--CAMBIO DE EJERCICIO, PASANDO A SECCION CONSULTAS--
+
+/*
+Mostrar la descripción (sin repeticiones) de los materiales utilizados en los proyectos cuya
+denominación empiece con “La” ordenados alfabéticamente. Revisar el uso del operador LIKE para esta
+sección
+*/
+SELECT DISTINCT m.Descripcion, p.Denominacion
+FROM Materiales m, Entregan e, Proyectos p
+WHERE m.Clave = e.Clave AND p.Numero = e.Numero AND p.Denominacion LIKE 'La%'
+
+
+
+/*
+Total de unidades entregadas a cada proveedor en el año del 2010, Ordenados de manera
+descendente con base en el total de unidades.
+*/
+
+SET DATEFORMAT DMY;
+
+SELECT p.RFC, SUM(e.cantidad) as 'Total de unidades entregadas'
+FROM Proveedores p, Entregan e
+WHERE p.RFC = e.RFC AND e.Fecha between '01/01/2010' and '31/12/2010'
+Group by p.RFC
+Order by SUM(e.cantidad) desc
+
+
+/*
+Número y denominación de los proyectos a los que no se les ha entregado materiales a lo largo del
+tiempo. Agregar 3 registros en la tabla de proyectos para poder validar el resultado de la consulta.
+*/
+
+
+Select numero, denominacion 
+from proyectos 
+where numero NOT IN (select numero from entregan)
+
+INSERT proyectos VALUES (5020,'Consultorio Valles')
+INSERT proyectos VALUES (5021,'Consultorio Valles QRO ')
+INSERT proyectos VALUES (5022,'Consultorio Valles CDMX')
