@@ -1,0 +1,27 @@
+</div>
+</div>
+</div>
+
+<!-- Script para que funcione el dropdown. Pasar a archivo js cuando se tengan más scripts -->
+<script>
+// Función que detecta cuando usuario da click en username
+function dropdown() {
+document.getElementById("menu").classList.toggle("show");
+}
+
+// Cierra el dropdown cuando el usuario da click en cualquier parte
+window.onclick = function(event) {
+if (!event.target.matches('.sesion')) {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+    var openDropdown = dropdowns[i];
+    if (openDropdown.classList.contains('show')) {
+      openDropdown.classList.remove('show');
+    }
+  }
+}
+}
+</script>
+</body>
+</html>
