@@ -1,7 +1,7 @@
 <?php
 require('db.php');
 include('previous-content.html');
-include('busqueda.php');
+include('../html/_pacientes.html');
 include('post-content.html');
 
 ?>
