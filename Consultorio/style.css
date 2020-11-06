@@ -1,0 +1,242 @@
+/* Variables CSS */
+
+:root {
+  --purple: #5b3d87;
+  --dark-purple: #331d52;
+  --dark-blue: #2c4454;
+}
+
+/* Insertar imagen de logo y agregar blur, clase solo del login */
+.body-login {
+  background-color: var(--dark-blue);
+}
+
+/* Contenedor que permite centrar el form */
+.form-container {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  margin: -25px 0 0 -25px;
+}
+
+.form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#form-title {
+  text-align: center;
+}
+
+/* Contendero que centra inputs y botón de login */
+.inputs-container {
+  text-align: center;
+}
+
+/* CSS de los inputs */
+input[type='text'], input[type='email'],
+input[type='password'] {
+     width: 400px;
+     border-radius: 2px;
+     border: 1px solid #CCC;
+     padding: 10px;
+     color: #333;
+     font-size: 14px;
+     margin-top: 10px;
+}
+input[type='submit']{
+     padding: 8px 25px 8px;
+     color: #fff;
+     background-color: #0067ab;
+     text-shadow: rgba(0,0,0,0.24) 0 1px 0;
+     font-size: 16px;
+     border: 1px solid #0164a5;
+     border-radius: 2px;
+     margin-top: 10px;
+     cursor:pointer;
+}
+input[type='submit']:hover {
+     background-color: #024978;
+}
+
+a {
+     color:#0067ab;
+     text-decoration: none;
+}
+a:hover {
+     text-decoration: underline;
+     color: #fff;
+}
+
+/* Dashboard CSS */
+
+#viewport {
+  padding-left: 250px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#content {
+  width: 100%;
+  position: relative;
+  margin-right: 0;
+}
+
+/* Sidebar */
+
+#sidebar {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 250px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: var(--purple);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar header {
+  background-color: var(--dark-purple);
+  font-size: 20px;
+  line-height: 80px;
+  text-align: center;
+}
+
+#sidebar header a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+#sidebar header a:hover {
+  color: red;
+}
+
+/* Navbar CSS */
+
+#sidebar .nav{
+  display: block;
+}
+
+#sidebar .nav a{
+  color: #CFD8DC;
+  font-size: 15px;
+}
+
+#sidebar .nav a:hover{
+  background: none;
+  text-decoration: none;
+}
+
+.li-dash {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+.li-dash:hover {
+  background-color: var(--dark-purple);
+}
+
+#sidebar .nav a i{
+  margin-right: 16px;
+}
+
+.navbar {
+  background-color: var(--dark-purple);
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.container-nav {
+  padding-right: 40px;
+  margin-left: auto;
+}
+
+.sesion {
+  color: white;
+  cursor: pointer;
+}
+
+/* Contenido dropdown del hover del nav */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--purple);
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--dark-purple);
+  text-decoration: none;
+  color: white;
+}
+
+.show {
+  display: block;
+}
+
+/* Para la imagen dummy. Borrar cuando se tenga contenido en home */
+.dummy {
+  width: 100%;
+  height: 100%;
+}
+
+/*CSS especificio registro pacientes*/
+
+.text-center{
+  text-align: center;
+}
+
+.Registrar{
+  width: 200px;
+
+}
+
+/*CSS especificio breadcrumbs*/
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
