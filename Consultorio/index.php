@@ -1,3 +1,3 @@
 <?php
-header("Location: php/login.php");
+require("php/login.php");
 ?>
