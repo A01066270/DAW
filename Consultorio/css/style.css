@@ -209,6 +209,14 @@ a:hover {
 
 }
 
+/*Crear grid de dos secciones*/
+.grid-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  background-color: #01447e;
+}
+
 /*CSS especificio breadcrumbs*/
 /* Style the list */
 ul.breadcrumb {
@@ -235,7 +243,7 @@ ul.breadcrumb li a {
   text-decoration: none;
 }
 
-/* Add a color on mouse-over */
+/* Agregar color al poner el mouse encima */
 ul.breadcrumb li a:hover {
   color: #01447e;
   text-decoration: underline;

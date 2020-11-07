@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Nuevo Usuario</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body class="body-login">
 <?php
@@ -18,7 +18,7 @@ if (isset($_REQUEST['username'])){
   $password = stripslashes($_REQUEST['password']);
   $password = mysqli_real_escape_string($con,$password);
   $reg_date = date("Y-m-d H:i:s");
-  $query = "INSERT into `users` (username, password, email, reg_date)
+  $query = "INSERT into `Empleado` (username, password, email, reg_date)
 
   VALUES ('$username', '".md5($password)."', '$email', '$reg_date')"; //md5 es para proteccion de contraseñas
   $result = mysqli_query($con,$query);

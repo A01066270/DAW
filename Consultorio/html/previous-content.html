@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Citas</title>
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -11,14 +11,14 @@
   <!-- Sidebar -->
     <div id="sidebar">
       <header>
-        <a href="dashboard.php">LOGO</a>
+        <a href="../php/dashboard.php">LOGO</a>
       </header>
       <ul class="nav">
         <li class="li-dash">
           <a href="#">Citas</a>
         </li>
         <li class="li-dash">
-          <a href="dashboard_pacientes.php">Pacientes</a>
+          <a href="../php/dashboard_pacientes.php">Pacientes</a>
         </li>
         <li class="li-dash">
           <a href="#">Presupuesto Dental</a>
@@ -40,7 +40,7 @@
           <li>
             <p id="sesion" class="sesion" onclick="dropdown()"><!--<?php echo $_SESSION['username'];?>--></p>
             <div id="menu" class="dropdown-content">
-              <a href="logout.php">Cerrar Sesión</a>
+              <a href="../php/logout.php">Cerrar Sesión</a>
             </div>
           </li>
         </ul>
