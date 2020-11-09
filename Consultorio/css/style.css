@@ -227,8 +227,15 @@ a:hover {
   height: 500px;
 }
 
-.esultado_busqueda{
+.resultado_busqueda{
   color:black;
+  width: 100%;
+  text-align: center;
+}
+
+.select_questions{
+  color: gray;
+  width: auto;
 }
 
 /*CSS especificio breadcrumbs*/

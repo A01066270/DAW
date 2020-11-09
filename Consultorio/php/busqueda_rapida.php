@@ -60,7 +60,7 @@
                     $fila = mysqli_fetch_array($ejecutarConsulta);
                 }
             }
-        }}else
+        }}
     ?>
     
     </table>
