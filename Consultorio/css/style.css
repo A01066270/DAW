@@ -87,6 +87,7 @@ a:hover {
 /* Sidebar */
 
 #sidebar {
+  
   z-index: 1000;
   position: fixed;
   left: 250px;
@@ -214,7 +215,20 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
-  background-color: #01447e;
+}
+.local-link{
+  text-decoration: none;
+  
+}
+.card{
+  background-color : #01447e;
+  text-align: center;
+  text-decoration: none;
+  height: 500px;
+}
+
+.esultado_busqueda{
+  color:black;
 }
 
 /*CSS especificio breadcrumbs*/

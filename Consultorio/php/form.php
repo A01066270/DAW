@@ -2,6 +2,13 @@
     require('db.php');
 ?>
 <br>
+<ul class="breadcrumb">
+                <li><a href="dashboard.php">Inicio</a> </li> 
+                <li><a href="dashboard_pacientes.php">Pacientes</a></li>
+                <li>Registrar Pacientes</li>
+            </ul>
+
+<br>
 <h1 class="login-title text-center">Registrar Paciente</h1>
 <br>
 
@@ -9,6 +16,8 @@
 <br>
 <hr>
 <form method="POST" class="text-center">
+    <div class="grid-2">
+        <div>
     <input type="text" class="login-input" name="nombre" placeholder="Nombre completo del paciente*" required >
     <br>
 <br>
@@ -20,17 +29,24 @@
 <br>
     <input type="text" class="login-input" name="telefono" placeholder="Telefono*" required><br><br>
     <input type="text" class="login-input" name="rfc" placeholder="RFC*" required><br><br>
-    <input type="datetime" class="login-input" name="fechaNacimiento" placeholder="Fecha de nacimiento(aaaa-mm-dd)*" required><br><br>
+    <input type="text" class="login-input" name="fechaNacimiento" placeholder="Fecha de nacimiento(aaaa-mm-dd)*" required><br><br>
     <input type="text" class="login-input" type='email' name="email" placeholder="Correo electrónico*"required><br><br>
     <input type="text" class="login-input" name="emailFacturas" placeholder="Correo electrónico Facturas"><br><br>
     <input type="text" class="login-input" name="razonsocial" placeholder="Razon Social"><br><br>
     <input type="text" class="login-input" name="direccion" placeholder="Direccion*" required><br><br>
     <input type="text" class="login-input" name="codigoPostal" placeholder="Codigo Postal*" required>
     <br>
+    </div>
+    <div>
+        
+    </div>
+    </div>
     <hr>
     <br>
     <input type="submit" name="submit" value="Registrar" class="Registrar login-button ">
-
+    <br>
+    <br>
+    
 </form>
 
 <?php
@@ -60,10 +76,9 @@ if(isset($_POST['submit'])){
         $insertarPaciente -> error;
     }else{
         ?>
-    <script type=text/javascript>
-            
-    alert('Registro completado');
-    </script><?php
+    <div class="alert alert-primary" role="alert">
+        Registro exitoso.
+    </div><?php
     }
     
 }
