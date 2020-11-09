@@ -60,7 +60,7 @@
             }
         }}elseif(isset($_POST['submit_tel'])){
         
-            $consulta = "SELECT nombre, telefono FROM Paciente WHERE telefono LIKE ".$_POST['buscaNumero'];       
+        $consulta = "SELECT nombre, telefono FROM Paciente WHERE telefono LIKE ".$_POST['buscaNumero'];       
         
         $ejecutarConsulta = mysqli_query($con, $consulta);
         $verFilas = mysqli_num_rows($ejecutarConsulta);
