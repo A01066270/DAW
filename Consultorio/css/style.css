@@ -239,6 +239,11 @@ a:hover {
 
 }
 
+.select_questions h5{
+  color:black;
+
+}
+
 .select_questions th, td {
   border-bottom: 1px solid #ddd;
   padding: 10px;

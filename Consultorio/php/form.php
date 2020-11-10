@@ -17,8 +17,9 @@
 <hr>
 <form method="POST" class="text-center">
     <div class="grid-2">
-    <div>
-    <h5>Datos personales del paciente</h5>
+    <div class="select_questions">
+    <h5 style='color:black;'>Datos personales del paciente</h5>
+    <label>Nombre completo del Paciente*</label><br>
     <input type="text" class="login-input" name="nombre" placeholder="Nombre completo del paciente*" required >
     <br>
 <br>
@@ -28,14 +29,24 @@
     <label for="0" style="color:gray">Mujer</label>
 <br>
 <br>
-    <input type="text" class="login-input" name="telefono" placeholder="Telefono*" required><br><br>
-    <input type="text" class="login-input" name="rfc" placeholder="RFC*" required><br><br>
-    <input type="text" class="login-input" name="fechaNacimiento" placeholder="Fecha de nacimiento(aaaa-mm-dd)*" required><br><br>
-    <input type="text" class="login-input" type='email' name="email" placeholder="Correo electrónico*"required><br><br>
-    <input type="text" class="login-input" name="emailFacturas" placeholder="Correo electrónico Facturas"><br><br>
-    <input type="text" class="login-input" name="razonsocial" placeholder="Razon Social"><br><br>
-    <input type="text" class="login-input" name="direccion" placeholder="Direccion*" required><br><br>
-    <input type="text" class="login-input" name="codigoPostal" placeholder="Codigo Postal*" required>
+    <label>Numero de telefono*</label><br>
+        <input type="text" class="login-input" name="telefono" placeholder="Telefono*" required><br><br>
+    <label>Ocupacion*</label><br>
+        <input type="text" class="login-input" name="rfc" placeholder="Estudiante..." required><br><br>
+    <label>RFC</label><br>
+        <input type="text" class="login-input" name="rfc" placeholder="JUAN19101998" ><br><br>
+    <label>Fecha de nacimiento*</label><br>
+        <input type="text" class="login-input" name="fechaNacimiento" placeholder="(aaaa-mm-dd)*" required><br><br>
+    <label>Correo electronico*</label><br>
+        <input type="text" class="login-input" type='email' name="email" placeholder="ejemplo@correo.com"required><br><br>
+    <label>Correo electronico de facturacion</label><br>
+        <input type="text" class="login-input" name="emailFacturas" placeholder="facturas@coreo.com"><br><br>
+    <label>Razon Social</label><br>
+        <input type="text" class="login-input" name="razonsocial" placeholder="..."><br><br>
+    <label>Direccion*</label><br>
+        <input type="text" class="login-input" name="direccion" placeholder="PSherman Calle Walabi 42,r Sydney" required><br><br>
+    <label>Codigo Postal*</label><br>
+        <input type="text" class="login-input" name="codigoPostal" placeholder="23456" required>
     <br>
     </div>
 
@@ -143,73 +154,12 @@
             <td>
                  <label>Alergia</label>
             </td>
-
             <td>
                  <input type="radio" name="alergia" value="1"> 
             <label for="1" style="color:gray">Si  </label>
         <input type="radio" name="alergia" value="0"> 
         <label for="0" style="color:gray">No</label>
     
-<<<<<<< HEAD
-    <label style="color:gray"> Cual?</label>
-    <input type="text" class="login-input" name="cualalergia" placeholder="Cacahuate, gatos, etc..."><br>
-
-
-        <td>
-            <tr><label>Cancer</label></tr>
-            <tr><input type="radio" name="cancer" value="1"> 
-    <label for="1" style="color:gray">Si  </label>
-    <input type="radio" name="cancer" value="0"> 
-    <label for="0" style="color:gray">No</label><br></tr>
-        </td>
-
-        <td>
-            <tr><label>Cirgía reciente</label></tr>
-            <tr><input type="radio" name="cirugmed" value="1"> 
-    <label for="1" style="color:gray">Si  </label>
-    <input type="radio" name="cirugmed" value="0"> 
-    <label for="0" style="color:gray">No</label><br></tr>
-        </td>
-        <td>
-            <tr><label>Tomado medicamento en los ultimos 2 meses</label></tr>
-            <tr><input type="radio" name="medicado" value="1"> 
-    <label for="1" style="color:gray">Si  </label>
-    <input type="radio" name="medicado" value="0"> 
-    <label for="0" style="color:gray">No</label><br></tr>
-        </td>
-        <td>
-            <tr><label>Tomado anticonceptivos en los ultimos 2 meses</label></tr>
-            <tr><input type="radio" name="anticoncept" value="1"> 
-    <label for="1" style="color:gray">Si  </label>
-    <input type="radio" name="anticoncepts" value="0"> 
-    <label for="0" style="color:gray">No</label><br></tr>
-        </td>
-        <td>
-            <tr><label>Estado Embarazada</label></tr>
-            <tr><input type="radio" name="embarazo" value="1"> 
-    <label for="1" style="color:gray">Si  </label>
-    <input type="radio" name="embarazo" value="0"> 
-    <label for="0" style="color:gray">No</label><br></tr>
-        </td>
-        <td>
-            <tr><label>Enfermedades de Transmisión Sexual</label></tr>
-            <tr><input type="radio" name="ETS" value="1"> 
-    <label for="1" style="color:gray">Si  </label>
-    <input type="radio" name="ETS" value="0"> 
-    <label for="0" style="color:gray">No</label><br></tr>
-        </td>
-        <td>
-            <tr><label>Ha viajado en las ultimas 2 semanas</label></tr>
-            <tr><input type="radio" name="viaje" value="1"> 
-    <label for="1" style="color:gray">Si  </label>
-    <input type="radio" name="viaje" value="0"> 
-    <label for="0" style="color:gray">No</label><br></tr>
-        </td>
-        <td>
-            <tr>
-            <input type="text" placeholder="Extras" class="login-input"><br></tr>
-        </td>
-=======
     <label style="color:gray"> Cual?</label><br>    
         <input type="text" class="login-input" name="cualalergia" placeholder="Cacahuate, gatos, etc..."><br>
 
@@ -271,7 +221,6 @@
                 <input type="radio" name="viaje" value="0"> 
                 <label for="0" style="color:gray">No</label><br></td>
         </tr>
->>>>>>> ff0b7156572f5ee68f841a055441d022d1c39240
     </table>
     <input type="text" placeholder="Extras" class="login-input" style='width:100%;'><br>
     <br>
