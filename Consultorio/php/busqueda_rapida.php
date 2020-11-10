@@ -27,20 +27,16 @@
 
     
 <div>
-    <table class="resultado_busqueda" >
-    <tr>
-        <td><em>Nombre</em></td>
-        <td><em>Número</em></td>
-        <td><em>Expediente</em></td>
-    </tr>
+    
   <?php
         if(isset($_POST['submit_nom'])){
         
-            $consulta = "SELECT nombre, telefono FROM Paciente WHERE nombre LIKE '%".$_POST['buscaNombre']."%'";       
+        $consulta = "SELECT nombre, telefono FROM Paciente WHERE nombre LIKE '%".$_POST['buscaNombre']."%'";       
         
         $ejecutarConsulta = mysqli_query($con, $consulta);
         $verFilas = mysqli_num_rows($ejecutarConsulta);
         $fila = mysqli_fetch_array($ejecutarConsulta);
+        echo"<table class='resultado_busqueda' ><tr><td><em>Nombre</em></td><td><em>Número</em></td><td><em>Expediente</em></td></tr>";
         if(!$ejecutarConsulta){
             echo"Error en la consulta";
         }else{
@@ -65,8 +61,9 @@
         $ejecutarConsulta = mysqli_query($con, $consulta);
         $verFilas = mysqli_num_rows($ejecutarConsulta);
         $fila = mysqli_fetch_array($ejecutarConsulta);
+        echo"<table class='resultado_busqueda' ><tr><td><em>Nombre</em></td><td><em>Número</em></td><td><em>Expediente</em></td></tr>";
         if(!$ejecutarConsulta){
-            echo"Error en la consulta";
+            echo"Error: No es posible hacer esta operación";
         }else{
             if($verFilas<1){
                 echo"<tr><td>Sin registros</td></tr>";
