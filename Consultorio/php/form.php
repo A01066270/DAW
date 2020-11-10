@@ -36,7 +36,7 @@
     <label>Estado Civil*</label><br>
         <input type="text" class="login-input" name="estadocivil" placeholder="Estudiante..." required><br><br>
     <label>Estado COVID-19*</label><br>
-        <input type="text" class="login-input" name="estadocovidrr" placeholder="Estudiante..." required><br><br>
+        <input type="text" class="login-input" name="estadocovidr" placeholder="Estudiante..." required><br><br>
     <label>RFC</label><br>
         <input type="text" class="login-input" name="rfc" placeholder="JUAN19101998" ><br><br>
     <label>Fecha de nacimiento*</label><br>
@@ -252,7 +252,7 @@ if(isset($_POST['submit'])){
     $ppresion = $_POST["ppresion"];
     $fuma = $_POST["fuma"];
     $alcohol = $_POST["alcohol"];
-    $drogas = $_POST["drogsa"];
+    $drogas = $_POST["drogas"];
     $tatuaje = $_POST["tatuaje"];
     $proren = $_POST["proren"];
     $diabetes = $_POST["diabetes"];
@@ -274,7 +274,7 @@ if(isset($_POST['submit'])){
     $Extras = $_POST["Extras"];
     
     $insertarPaciente = "INSERT INTO Paciente (idPaciente, nombre, sexo, fechanacimiento, email, telefono, emailFacturas, razonsocial, direccion, codigopostal, ocupacion, estadocivil, estadocovid, rfc, EnferResp, CualEnferResp, Presion, Alergias, CualAlergias, fumador, alcohol, drogas, tatuajes, ProbRenales, Diabetes, Hepatitis, Artritis, EnfSanguinea, EnfSisNev, Cancer, CirugMedica, Medicado, Anticoncepts, Embarazo, ATS, ViajoCiudad,Extras) 
-    VALUES ($id,'".$nombre."', $sexo, '".$fechaNacimiento."', '".$email."', ".$telefono.", '".$emailFacturas."','".$razonsocial."', '".$direccion."', ".$codigoPostal.", '"$ocupacion"', '".$rfc."',  )";
+    VALUES ($id,'".$nombre."', $sexo, '".$fechaNacimiento."', '".$email."', ".$telefono.", '".$emailFacturas."','".$razonsocial."', '".$direccion."', ".$codigoPostal.", '".$ocupacion."', '".$rfc."',  )";
     
     /*var_dump($insertarPaciente);*/
     $ejecutarInsertar = mysqli_query($con,$insertarPaciente);
