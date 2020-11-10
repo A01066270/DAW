@@ -235,9 +235,14 @@ a:hover {
 
 .select_questions{
   color: gray;
-  width: auto;
+  width: 100%;
+
 }
 
+.select_questions th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
 /*CSS especificio breadcrumbs*/
 /* Style the list */
 ul.breadcrumb {
