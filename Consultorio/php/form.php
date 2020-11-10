@@ -32,7 +32,11 @@
     <label>Numero de telefono*</label><br>
         <input type="text" class="login-input" name="telefono" placeholder="Telefono*" required><br><br>
     <label>Ocupacion*</label><br>
-        <input type="text" class="login-input" name="rfc" placeholder="Estudiante..." required><br><br>
+        <input type="text" class="login-input" name="ocupacion" placeholder="Estudiante..." required><br><br>
+    <label>Estado Civil*</label><br>
+        <input type="text" class="login-input" name="estadocivil" placeholder="Estudiante..." required><br><br>
+    <label>Estado COVID-19*</label><br>
+        <input type="text" class="login-input" name="estadocovidrr" placeholder="Estudiante..." required><br><br>
     <label>RFC</label><br>
         <input type="text" class="login-input" name="rfc" placeholder="JUAN19101998" ><br><br>
     <label>Fecha de nacimiento*</label><br>
@@ -76,7 +80,7 @@
                 <input type="radio" name="alcohol" value="0"> 
                 <label for="0" style="color:gray" >No</label><br></td>
         </tr>
-        <tr>
+        <tr>r
             <td><label>Consume drogas</label></td>
             <td><input type="radio" name="drogas" value="1"> 
                 <label for="1" style="color:gray">Si  </label>
@@ -167,10 +171,6 @@
 
         </tr>
     <br>
-
-       
-           
-
         <tr>
             <td><label>Cancer</label></td>
             <td><input type="radio" name="cancer" value="1"> 
@@ -222,7 +222,7 @@
                 <label for="0" style="color:gray">No</label><br></td>
         </tr>
     </table>
-    <input type="text" placeholder="Extras" class="login-input" style='width:100%;'><br>
+    <input type="text" placeholder="Extras" name='Extras' class="login-input" style='width:100%;'><br>
     <br>
     </div>
     </div>
@@ -241,6 +241,7 @@ if(isset($_POST['submit'])){
     $sexo = $_POST["sexo"];
     $nombre = $_POST["nombre"];
     $telefono = $_POST["telefono"];
+    $ocupacion = $_POST["ocupacion"];
     $rfc = $_POST["rfc"];
     $email = $_POST["email"];
     $fechaNacimiento = $_POST["fechaNacimiento"];
@@ -249,9 +250,31 @@ if(isset($_POST['submit'])){
     $direccion = $_POST["direccion"];
     $codigoPostal = $_POST["codigoPostal"];
     $ppresion = $_POST["ppresion"];
+    $fuma = $_POST["fuma"];
+    $alcohol = $_POST["alcohol"];
+    $drogas = $_POST["drogsa"];
+    $tatuaje = $_POST["tatuaje"];
+    $proren = $_POST["proren"];
+    $diabetes = $_POST["diabetes"];
+    $hepoatitis = $_POST["hepatitis"];
+    $artritis = $_POST["artritis"];
+    $enfesang = $_POST["enfesang"];
+    $enfesist = $_POST["enfesist"];
+    $enferesp = $_POST["enferesp"];
+    $cualenferesp = $_POST["cualenferesp"];
+    $alergia = $_POST["alergia"];
+    $cualalergia = $_POST["cualalergia"];
+    $cancer = $_POST["cancer"];
+    $cirugmed = $_POST["cirugmed"];
+    $medicado = $_POST["medicado"];
+    $anticoncepts = $_POST["anticoncepts"];
+    $embarazo = $_POST["embarazo"];
+    $ETS = $_POST["ETS"];
+    $viaje = $_POST["viaje"];
+    $Extras = $_POST["Extras"];
     
-    $insertarPaciente = "INSERT INTO Paciente (idPaciente, sexo, nombre, fechanacimiento, telefono, rfc, email, emailFacturas, razonsocial, direccion, codigopostal) 
-    VALUES ($id, $sexo,'".$nombre."', '".$fechaNacimiento."', ".$telefono.", '".$rfc."', '".$email."', '".$emailFacturas."', '".$razonsocial."', '".$direccion."', $codigoPostal)";
+    $insertarPaciente = "INSERT INTO Paciente (idPaciente, nombre, sexo, fechanacimiento, email, telefono, emailFacturas, razonsocial, direccion, codigopostal, ocupacion, estadocivil, estadocovid, rfc, EnferResp, CualEnferResp, Presion, Alergias, CualAlergias, fumador, alcohol, drogas, tatuajes, ProbRenales, Diabetes, Hepatitis, Artritis, EnfSanguinea, EnfSisNev, Cancer, CirugMedica, Medicado, Anticoncepts, Embarazo, ATS, ViajoCiudad,Extras) 
+    VALUES ($id,'".$nombre."', $sexo, '".$fechaNacimiento."', '".$email."', ".$telefono.", '".$emailFacturas."','".$razonsocial."', '".$direccion."', ".$codigoPostal.", '"$ocupacion"', '".$rfc."',  )";
     
     /*var_dump($insertarPaciente);*/
     $ejecutarInsertar = mysqli_query($con,$insertarPaciente);

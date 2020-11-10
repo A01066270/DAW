@@ -1,6 +1,6 @@
 <?php
 
-$_GLOBALS["env"] = "FER";
+$GLOBALS["env"] = "FER";
 
 
 ?>

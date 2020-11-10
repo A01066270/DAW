@@ -248,6 +248,9 @@ a:hover {
   border-bottom: 1px solid #ddd;
   padding: 10px;
 }
+.resultados {
+  width:100%;
+}
 /*CSS especificio breadcrumbs*/
 /* Style the list */
 ul.breadcrumb {
