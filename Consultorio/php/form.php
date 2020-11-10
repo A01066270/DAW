@@ -197,17 +197,8 @@
             <tr>
             <input type="text" placeholder="Extras" class="login-input"><br></tr>
         </td>
-
-
-
-
-
-
     </table>
     <br>
-
-
-
     </div>
     </div>
     <hr>
@@ -232,6 +223,7 @@ if(isset($_POST['submit'])){
     $razonsocial =$_POST["razonsocial"];
     $direccion = $_POST["direccion"];
     $codigoPostal = $_POST["codigoPostal"];
+    $ppresion = $_POST["ppresion"];
     
     $insertarPaciente = "INSERT INTO Paciente (idPaciente, sexo, nombre, fechanacimiento, telefono, rfc, email, emailFacturas, razonsocial, direccion, codigopostal) 
     VALUES ($id, $sexo,'".$nombre."', '".$fechaNacimiento."', ".$telefono.", '".$rfc."', '".$email."', '".$emailFacturas."', '".$razonsocial."', '".$direccion."', $codigoPostal)";
