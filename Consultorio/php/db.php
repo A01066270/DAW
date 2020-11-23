@@ -79,4 +79,25 @@ function verpaciente(){
   return $resultado;
   }
  
+  function insertar_paciente($id, $nombre, $sexo, $telefono, $rfc, $email, $emailFacturas, $razonsocial, $direccion, $codigoPostal){
+    $con = conectar();
+    $insertarPaciente = "INSERT INTO Paciente (idPaciente, nombre, sexo, fechanacimiento, email, telefono, emailFacturas, razonsocial, direccion, codigopostal) 
+    VALUES ($id,'".$nombre."', $sexo, '".$fechaNacimiento."', '".$email."', ".$telefono.", '".$emailFacturas."','".$razonsocial."', '".$direccion."', ".$codigoPostal." )";
+    
+    var_dump($insertarPaciente);
+    $ejecutarInsertar = mysqli_query($con,$insertarPaciente);
+    
+    
+    if (!$ejecutarInsertar){
+        echo "Error en consulta sql.";
+        $insertarPaciente -> error;
+    }else{
+        ?>
+    <div class="alert alert-primary" role="alert">
+        Registro exitoso.
+    </div><?php
+    }
+    desconectar($con);
+  }
+
 ?>
